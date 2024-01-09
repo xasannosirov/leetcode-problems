@@ -1,8 +1,7 @@
 func maxCoins(piles []int) int {
 	sort.Ints(piles)
-	res := 0
-	n := len(piles)
-
+	res, n := 0, len(piles)
+    
 	for i := n - 2; i >= n/3; i -= 2 {
 		res += piles[i]
 	}
